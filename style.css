@@ -1,0 +1,26 @@
+/* sezione generale */
+*{
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* container generale */
+
+.container{
+    height: 100vh; 
+    display: flex;
+    /* DEBUG */
+    background-color: black;
+
+}
+/* contenitore barra indicizzazione contenuto */
+.left {
+    width: 300px;
+    background-color: #0b0b0b; 
+}
+/* contenitore generale content */
+.right {
+    flex-grow: 1;
+    background-color: #423c3c; 
+}
