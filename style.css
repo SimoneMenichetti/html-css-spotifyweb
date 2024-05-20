@@ -66,4 +66,24 @@ i{
   background-color: #a19e9e;
 }
 
+.left, {
+  height: calc(100vh - 200px);
+}
+
+
+.col-upgrade{
+  position: fixed;
+  z-index: 1;
+  width: calc(100% - 200px);
+  background-color: #0B0E14;
+  text-align: right;
+  }
+
+
+  .col-player{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
 
