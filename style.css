@@ -32,7 +32,7 @@ i{
 
   .logo{
     object-fit: cover;
-    width: 40px;
+    width: 50px;
     vertical-align: middle;
   }
 
@@ -40,6 +40,7 @@ i{
   display: flex;
   align-items: center; 
   margin-right: 15px;
+  padding-bottom: 20px;
 }
 
 .heading {
@@ -47,6 +48,25 @@ i{
   margin-right: 5em;
   padding: 5px;
   
+}
+
+/* INIZIO SEZIONE LIST ITEM " HOME , SEARCH ECC */
+
+
+.left ul {
+  list-style-type: none;
+   
+}
+
+/* REGOLE IMG */
+ .list-item a img{
+  object-fit: cover;
+  width: 10%;
+  
+}
+
+.list-item {
+  margin-bottom: 10px;
 }
 
 /* SEZIONE GENERALE CONTENUTI SINISTRA E DESTRA */
