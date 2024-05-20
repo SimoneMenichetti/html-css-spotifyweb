@@ -3,18 +3,16 @@
     box-sizing: border-box;
     margin: 0 auto;
     padding: 0;
+    font-family: ;
     /*debug  */
     background-color: black;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    
 }
 
-
-
-.containerwrapper{
-  display: flex;
-  flex-wrap: wrap;
-  height: 85vh;
-  overflow: scroll;
-}
 
 /* proprietà generali dei selettori */
 h3,h4,h6,i,p,div{
@@ -29,9 +27,29 @@ i{
     color: white;
     text-decoration: none;
   }
-  
 
-/* contenitore barra indicizzazione contenuto */
+  /* LOGO Spotify ed item BARRA LEFT */
+
+  .logo{
+    object-fit: cover;
+    width: 40px;
+    vertical-align: middle;
+  }
+
+  .box-logo {
+  display: flex;
+  align-items: center; 
+  margin-right: 15px;
+}
+
+.heading {
+  font-size: 1.2em;
+  margin-right: 5em;
+  padding: 5px;
+  
+}
+
+/* SEZIONE GENERALE CONTENUTI SINISTRA E DESTRA */
 
 .container {
   display: flex;
@@ -66,11 +84,11 @@ i{
   background-color: #a19e9e;
 }
 
-.left, {
+.left, .col-player {
   height: calc(100vh - 200px);
 }
 
-
+/* SEZIONE TOP BAR UPGRADE */
 .col-upgrade{
   position: fixed;
   z-index: 1;
@@ -79,11 +97,12 @@ i{
   text-align: right;
   }
 
-
+/* SEZIONE PLAYER IN BASSO */
   .col-player{
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  
 }
 
