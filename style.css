@@ -19,6 +19,10 @@ h3,h4,h6,i,p,div{
   color: white;
 }
 
+.list hr{
+  color: #a19e9e;
+}
+
 
   
 i{
@@ -104,6 +108,29 @@ i{
   color: #a19e9e;
 }
 
+/* loghi footer bar sinistra */
+
+.logo-download, .logo-profile{
+  object-fit: cover;
+  width: 30px;
+ 
+}
+
+.circular .logo-profile{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #a19e9e;
+}
+
+
+
+.footerbarra .list-item{
+display: flex;
+align-items: center; 
+
+}
+
 
 
 
@@ -127,7 +154,7 @@ i{
   display: flex;
   flex-wrap: wrap;
   /* debug */
-  background-color: #034106; 
+  
   padding: 10px; 
 }
 
@@ -151,9 +178,9 @@ i{
 .col-upgrade{
   position: fixed;
   z-index: 1;
-  width: calc(100% - 200px);
-  background-color: #0B0E14;
+  width: calc(100% - 210px);
   text-align: right;
+  
   }
 
 /* SEZIONE PLAYER IN BASSO */
