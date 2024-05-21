@@ -143,7 +143,7 @@ align-items: center;
 }
 
 .left {
-  width: 200px;
+ height: 200px;
   /* debug */
   background-color: #020000; 
   padding: 10px; 
@@ -154,7 +154,6 @@ align-items: center;
   display: flex;
   flex-wrap: wrap;
   /* debug */
-  
   padding: 10px; 
 }
 
@@ -171,24 +170,35 @@ align-items: center;
 }
 
 .left, .col-player {
-  height: calc(100vh - 200px);
+  height: calc(100vh - 200px - 50px - 90px);
 }
 
 /* SEZIONE TOP BAR UPGRADE */
 .col-upgrade{
-  position: fixed;
-  z-index: 1;
-  width: calc(100% - 210px);
-  text-align: right;
+    position: fixed;
+    z-index: 1;
+    text-align: right;
+    width: 100%;
   
   }
 
+  .col .col-one{
+   justify-content: center;
+   display: flex;
+  gap: 20px;
+  
+  }
+
+  .col .col-one h4{
+    color: #a19e9e;
+    font-size: small;
+   }
 /* SEZIONE PLAYER IN BASSO */
   .col-player{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  height: 90px;
   
 }
 
