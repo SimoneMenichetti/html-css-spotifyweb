@@ -114,6 +114,7 @@ i{
   margin-right: 1rem;
   margin-bottom: 1rem;
   font-size: 0.8rem;
+
 }
 
 .navbar ul li:hover{
@@ -123,6 +124,7 @@ i{
 
 .navbar ul li:first-of-type .underline{
   visibility: visible;
+  margin-left: 5px;
 }
 
 .underline{
@@ -434,22 +436,25 @@ i{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
-  
 }
 
 
 .controlpannel {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #282828;
   width: 100%;
   height: 90px;
-  background-color: #333;
+  padding-bottom: 10px;
 }
+
 
 
 /*  SEZIONE TRACK CURRENT INFO AND ICONS */
 .current-track{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-flow: row;
   order: 1;
   padding: 10px;
@@ -491,6 +496,7 @@ color: #a19e9e;
   justify-content: center;
   align-items: flex-end;
   color: #fff;
+  padding-bottom: 10px;
 
 }
 .track-btn{
