@@ -21,26 +21,7 @@
     overflow: hidden;
   }
 
-/* proprietà generali dei selettori */
-h3,h4,h6,i,p,div{
-  color: white;
-}
 
-.list hr{
-  color: #a19e9e;
-  background-color: #020000;
-}
-
-
-  
-i{
-  padding-right: 10px;
-  display: inline-block;
-}
-  a:hover {
-    color: white;
-    text-decoration: none;
-  }
 
 
 
