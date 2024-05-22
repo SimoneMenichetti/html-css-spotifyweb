@@ -22,15 +22,7 @@
   }
 
 
-
-
-
 /* SEZIONE GENERALE CONTENUTI SINISTRA E DESTRA */
-
-.container {
-  display: flex;
- 
-}
 
 /* SEZIONE MAIN CARDS */
 
@@ -46,6 +38,7 @@
 }
 
 /* SEZIONE TOP BAR UPGRADE POSITION FIXED */
+
 
 .topbar{
   display: flex;
@@ -95,7 +88,6 @@
   margin-right: 1rem;
   margin-bottom: 1rem;
   font-size: 0.8rem;
-
 }
 
 .navbar ul li:hover{
@@ -105,7 +97,6 @@
 
 .navbar ul li:first-of-type .underline{
   visibility: visible;
-  margin-left: 5px;
 }
 
 .underline{
@@ -113,7 +104,7 @@
   height: 2px;
   width: 30px;
   position:relative;
-  left: 50%;
+  left: 20%;
   transform: translate(-50%, 0);
   visibility: hidden;
 }
@@ -222,6 +213,7 @@
 .most_popular .card{
   margin-bottom: 1rem;
 }
+
 
 
 /* SEZIONE LFT SIDEBAR */
@@ -548,7 +540,7 @@ color: #a19e9e;
 
 @media screen and (max-width: 768px){
 
-  .sidebar{
+  .sidebar .sidebar_nav_playlist, span{ 
     display: none;
   }
 
@@ -566,10 +558,6 @@ color: #a19e9e;
 
   .card {
     flex-basis: calc(100% / 2 - 1rem);
-  }
-
-  .playing_right{
-    flex-direction: column;
   }
 
   .time{
