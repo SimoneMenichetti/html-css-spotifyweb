@@ -13,10 +13,13 @@
     
 }
 
-main {
-  height: 100vh;
-  display: flex;
-}
+
+  main{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
 
 /* proprietà generali dei selettori */
 h3,h4,h6,i,p,div{
@@ -39,62 +42,10 @@ i{
     text-decoration: none;
   }
 
-  /* LOGO Spotify ed item BARRA LEFT */
-
-  .logo{
-    object-fit: cover;
-    width: 50px;
-    vertical-align: middle;
-  }
-
-  .box-logo {
-  display: flex;
-  align-items: center; 
-  padding-bottom: 20px;
-  border: solid white 2px;
-}
-
-.heading {
-  font-size: 1.2em;
-  padding: 5px;
-  
-}
-
-/* INIZIO SEZIONE LIST ITEM " HOME , SEARCH ECC */
-
-
-.left ul {
-  list-style-type: none;
-  text-align: left;
-   
-}
-
-.left a{
-  text-decoration: none;
-  color:grey;
-  
-  
-}
-
-
-
-
-
-/* REGOLE IMG */
- .list-item a img{
-  object-fit: cover;
-  width: 10%;
-  
-}
-
-.list-item {
  
-  font-size:x-small;
-  
-  color:grey;
-  border: solid white 1px;
-  
-}
+
+
+
 
 /* SEZIONE PLAY LIST */
 
@@ -156,38 +107,376 @@ background-color: #020000;
  
 }
 
-.left {
- min-height: 200px;
-  /* debug */
-  background-color: #020000; 
-  padding: 10px;
- 
+/* SEZIONE MAIN CARDS */
+
+.main-section{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: calc(100% - 230px);
+  height: calc(100% - 90px);
+  background-color: #141922;
+  overflow-y: scroll;
+  min-width: 400px;
 }
 
-.right {
-  flex-grow: 1;
+/* SEZIONE TOP BAR UPGRADE POSITION FIXED */
+
+.topbar{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+  height: 90px;
+  min-width: 400px;
+  width: calc(100% - 230px);
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.topbar .upgrade_btn{
+  width: 200px;
+  height: 40px;
+  border: 1px solid white;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  line-height: 40px;
+  margin-right: 2rem;
+  font-size: 0.8rem;
+  transition: 1s;
+}
+
+.upgrade_btn:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.navbar{
+  padding-top: 110px;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar ul{
   display: flex;
   flex-wrap: wrap;
-  /* debug */
-  padding: 10px; 
-  background-color: #110e0e;
-  border: solid white 2px;
-  
-}
-
-.col {
-  flex: 1 1 100%; 
-  min-height: 100px; 
-  margin: 5px;
-  display: flex;
-  align-items: center;
   justify-content: center;
-  /* debug */
-  text-align: center;
-  border: solid white 2px;
-  flex-wrap: nowrap;
 }
 
+.navbar ul li{
+  display: inline-block;
+  list-style-type: none;
+  color: grey;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+}
+
+.navbar ul li:hover{
+  color: white;
+  cursor: pointer;
+}
+
+.navbar ul li:first-of-type .underline{
+  visibility: visible;
+}
+
+.underline{
+  background-color: #afff2a;
+  height: 2px;
+  width: 30px;
+  position:relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  visibility: hidden;
+}
+
+.recent_player{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.recent_player h1{
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.recent_player h4, .created_for h4, .most_popular h4{
+  color: white;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.recent_player .card p{
+  color: grey;
+  text-align: center;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.music_grid{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin-top: 1rem;
+  margin-right: 1rem;
+  flex-basis: calc(100% / 6 - 1rem);
+}
+
+.image{
+  position: relative;
+}
+
+.overlay {
+	display: none;
+  position: absolute;
+	top: 0;
+	left: 0;
+  bottom: 0;
+  right: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+	font-size: 5rem;
+}
+
+.play {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.image:hover .overlay {
+	display: inline-block;
+  cursor: pointer;
+}
+
+.round{
+  border-radius: 50%;
+}
+
+.card img{
+  width: 100%;
+}
+
+.created_for{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.created_for h1, .most_popular h1{
+  color: white;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.created_for p, .most_popular p{
+  margin-bottom: 1rem;
+  color: grey;
+  font-size: 0.8rem;
+}
+
+.most_popular{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.most_popular .card img{
+  border-radius: 50%;
+}
+
+.card img::before:hover{
+  opacity: 1;
+  content:"WOW";
+}
+
+.most_popular .card{
+  margin-bottom: 1rem;
+}
+
+
+/* SEZIONE LFT SIDEBAR */
+
+/* SIDEBAR SMALL */
+
+.sidebar_small{
+  width: 70px;
+  height: calc(100% - 90px);
+  background-color: black;
+  visibility: hidden;
+  text-align: center;
+  position:relative;
+}
+
+.sidebar_small_logo img{
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0.5rem 0;
+}
+
+.sidebar_small_top img{
+  width: 2rem;
+  height: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.sidebar_small_bot{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.sidebar_small_bot img{
+  width: 2rem;
+  height: 2rem;
+  background-color: grey;
+  border-radius: 50%;
+  margin-top: 1rem;
+}
+
+.sidebar_small_bot i{
+  color: grey;
+}
+
+
+/* SIDEBAR */
+
+.sidebar{
+  position:absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: black;
+  width: 230px;
+  height: calc(100% - 90px);
+  color: grey;
+}
+
+.sidebar_top{
+  min-height: 400px;
+  overflow: hidden;
+}
+
+.sidebar_logo img{
+  width: 80%;
+  padding: 1rem;
+}
+
+.sidebar_nav_top img{
+  width: 1.8rem;
+  height: 1.8rem;
+  vertical-align: middle;
+}
+
+.sidebar_nav_top li{
+  list-style-type: none;
+  padding-left: 1rem;
+  margin-bottom: 0.6rem;
+  line-height: 1.6rem;
+  height: 1.6rem;
+}
+
+.sidebar_nav_top li:first-of-type{
+  border-left: 2px solid #afff2a;
+  color: white;
+}
+
+.sidebar_nav_top li:hover{
+  color: white;
+  cursor: pointer;
+}
+
+.sidebar_nav_top span{
+  font-size: 0.8rem;
+}
+
+.sidebar_nav_playlist{
+  margin-left: 1rem;
+  overflow: hidden;
+}
+
+.sidebar_nav_playlist > p{
+  margin-top: 1.6rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.add:hover, .sidebar_bot span:first-of-type:hover{
+  color: white;
+  cursor: pointer;
+}
+
+.plus{
+  height: 2.7rem;
+  width: 2.7rem;
+  background-color: grey;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.plus i{
+  color: black;
+  font-size: 1.2rem;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sidebar_nav_playlist ul{
+  margin-top: 1rem;
+}
+
+.playlist_name li{
+  list-style-type: none;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.playlist_name li:hover{
+  color: white;
+  cursor: pointer;
+}
+
+.sidebar_bot{
+  margin-left: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.line{
+  height: 1px;
+  background-color: grey;
+  width: 200px;
+  margin-bottom: 0.8rem;
+  margin-top: 0.8rem;
+}
+
+.sidebar_bot img{
+  width: 1.8rem;
+  height: 1.8rem;
+  vertical-align: middle;
+  background-color: grey;
+  border-radius: 50%;
+}
+
+.sidebar_bot span{
+  margin-left: 0.5rem;
+}
+
+.sidebar_bot span:first-of-type, .sidebar_bot i{
+  font-size: 0.8rem;
+}
+
+.sidebar_bot span:last-of-type{
+  color: white;
+}
 
 
 /* SEZIONE TOP BAR UPGRADE */
@@ -388,14 +677,14 @@ color: #a19e9e;
   align-items: flex-end;
   width: 100px;
   height: 5px;
-  border-top: 5px solid rgba(255, 255, 255, 0.5);
+  border-top: 5px solid rgba(255, 255, 255, 0.8);
 }
 .sub-soundbar{
   height: 100%;
   width: 40%;
-  border-top: 5px solid rgba(255, 255, 255, 0.8);
+  border-top: 5px solid rgba(255, 255, 255, 0.5);
 }
-.sub-soundbar:hover{
+.soundbar:hover{
   border-top-color: #41D223;
 }
 
