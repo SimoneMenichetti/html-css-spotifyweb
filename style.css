@@ -42,62 +42,6 @@ i{
     text-decoration: none;
   }
 
- 
-
-
-
-
-/* SEZIONE PLAY LIST */
-
-.playlist{
-  background-color: #020000;
-   border: solid white 2px;
-   margin-top: 10px;
-}
-.playlist li{
-  padding-bottom: 10px;
-  font-size: 12px;
-}
-
-.playlist  a{
-  color:grey;
-}
-
-.playlist .txt a{
-  color: white;
-  font-weight: bold;
-}
-
-.fa-square-plus{
-  font-size: 35px;
-  color: #a19e9e;
-}
-
-/* loghi footer bar sinistra */
-
-.logo-download, .logo-profile{
-  object-fit: cover;
-  width: 30px;
- 
-}
-
-.circular .logo-profile{
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: #a19e9e;
-}
-
-
-
-.footerbarra .list-item{
-display: flex;
-align-items: center; 
-background-color: #020000;
-
-}
-
-
 
 
 /* SEZIONE GENERALE CONTENUTI SINISTRA E DESTRA */
@@ -299,7 +243,7 @@ background-color: #020000;
 
 /* SEZIONE LFT SIDEBAR */
 
-/* SIDEBAR SMALL */
+
 
 .sidebar_small{
   width: 70px;
@@ -397,6 +341,10 @@ background-color: #020000;
   font-size: 0.8rem;
 }
 
+
+
+/* SEZIONE PLAY LIST */
+
 .sidebar_nav_playlist{
   margin-left: 1rem;
   overflow: hidden;
@@ -445,6 +393,8 @@ background-color: #020000;
   cursor: pointer;
 }
 
+/* sezione sidebar BOX IN BASSO */
+
 .sidebar_bot{
   margin-left: 1rem;
   margin-bottom: 0.8rem;
@@ -477,85 +427,6 @@ background-color: #020000;
 .sidebar_bot span:last-of-type{
   color: white;
 }
-
-
-/* SEZIONE TOP BAR UPGRADE */
-.col-upgrade{
- 
-    width: 100%;
-    border: solid white 2px;
-    text-align: right;
-  }
-
-  .col .col-one{
-   justify-content: center;
-   display: flex;
-   gap: 20px;
-  
-  
-  }
-
-  .col .col-one a{
-    color: #a19e9e;
-    font-size: small;
-    text-decoration: none;
-   }
-
-   .col .col-one li{
-    list-style: none;
-   }
-
- 
-
-    .right  .title-col-left, h2{
-    text-align: left;
-    margin: 0 10px;
-   }
-
-   .right .compilation {
-      
-      display: flex;
-      flex-direction: row;
-  }
-
-  .compilation, .suggerimenti, h3 p{
-   margin: 0 10px;
-   text-align: left;
-  }
-
-  .compilation img {
-    width: calc(100% / 6  - 90px -2);
-    width: 200px;
-    object-fit: cover;
-    padding: 0 10px;
-}
-
-
-.compilation-50 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
- flex-wrap: wrap;
-  
-}
-
-.compilation-50 img {
-  width: calc(100% / 2  );
-  width: 200px;
-  object-fit: cover;
-  padding: 0 10px;
-  align-self: left;
-}
-
-
-.circular .copertina{
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background-color: #a19e9e;
-}
-
-
 
 
 /* SEZIONE PLAYER IN BASSO */
